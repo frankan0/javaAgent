@@ -56,7 +56,7 @@
           <configuration>
             <archive>
               <manifestEntries>
-                <premain-class>com.onenavigation.AgentKeeper</premain-class>
+                <premain-class>com.apm.log.AgentKeeper</premain-class>
               </manifestEntries>
             </archive>
           </configuration>

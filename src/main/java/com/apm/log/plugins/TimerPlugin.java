@@ -1,9 +1,8 @@
-package com.onenavigation.plugins;
+package com.apm.log.plugins;
 
+import com.apm.log.adapter.ChangeVersionAdapter;
 import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
-import org.objectweb.asm.Opcodes;
 
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
@@ -23,6 +22,6 @@ public class TimerPlugin implements ClassFileTransformer {
         ChangeVersionAdapter ca = new ChangeVersionAdapter(cw);
         cr.accept(ca, 0);
         byte[] b2 = cw.toByteArray();
-        return new byte[0];
+        return b2;
     }
 }
